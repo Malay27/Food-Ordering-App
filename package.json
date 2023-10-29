@@ -1,0 +1,22 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "This is food ordering app",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "malay",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.1",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "broswerlist":[
+    "last 2 version"
+  ]
+}
