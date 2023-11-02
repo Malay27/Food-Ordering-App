@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const title = ()=>(
-    <h1 id="title">Namaste React</h1>
+const Title = ()=>(
+    <h1 id="title">Tasty Trek</h1>
 );
 
 const HeadingComponents = () => {
   return (
     <div>
-      {title}
+      {Title()}
       <h2>Namaste React Functional Components</h2>
       <h2>This is a h2 tag</h2>
     </div>
