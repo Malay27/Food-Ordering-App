@@ -1,20 +1,41 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import logoImage from "./images/Logo.png";
 
-const Title = ()=>(
-    <h1 id="title">Tasty Trek</h1>
+const Title = () => (
+  <a href="/">
+    <img className="logo" src={logoImage} alt="logo"></img>
+  </a>
 );
 
-const HeadingComponents = () => {
+const HeaderComponents = () => {
   return (
-    <div>
-      {Title()}
-      <h2>Namaste React Functional Components</h2>
-      <h2>This is a h2 tag</h2>
+    <div className="header">
+      <Title />
+      <div className="nav-item">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
     </div>
   );
 };
 
+
+const Body = () =>{
+  
+}
+// const AppLayout = () =>{
+//   return (
+//     <Header/>
+//     <Body/>
+//     <Footer/>
+//   );
+// }
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponents />);
+root.render(<HeaderComponents />);
