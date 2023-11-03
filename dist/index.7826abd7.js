@@ -2967,7 +2967,7 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         columnNumber: 21
     }, undefined);
 _c = Title;
-const HeaderComponents = ()=>{
+const Header = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header",
         children: [
@@ -3026,26 +3026,171 @@ const HeaderComponents = ()=>{
         columnNumber: 10
     }, undefined);
 };
-_c1 = HeaderComponents;
-const Body = ()=>{};
-_c2 = Body;
-// const AppLayout = () =>{
-//   return (
-//     <Header/>
-//     <Body/>
-//     <Footer/>
-//   );
-// }
+_c1 = Header;
+const restrauntList = {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpISLzf2yeqCLYdGAm14256zLbsa4yI8hWEg&usqp=CAU",
+    name: "Pizza Place",
+    cusines: [
+        "Pizza",
+        "American"
+    ],
+    rating: "4.2"
+};
+const RestrauntCard = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: restrauntList.img
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 28,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: restrauntList.name
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: restrauntList.cusines.join(", ")
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 30,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: [
+                    restrauntList.rating,
+                    " start"
+                ]
+            }, void 0, true, {
+                fileName: "App.js",
+                lineNumber: 31,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 27,
+        columnNumber: 10
+    }, undefined);
+};
+_c2 = RestrauntCard;
+const Body = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restraunt-list",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 36,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 37,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 38,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 39,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 40,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 41,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 42,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 43,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 44,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 45,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 46,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 35,
+        columnNumber: 10
+    }, undefined);
+};
+_c3 = Body;
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "App.js",
+        lineNumber: 50,
+        columnNumber: 10
+    }, undefined);
+};
+_c4 = Footer;
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 54,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 55,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 56,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c5 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponents, {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 30,
+    lineNumber: 60,
     columnNumber: 13
 }, undefined));
-var _c, _c1, _c2;
+var _c, _c1, _c2, _c3, _c4, _c5;
 $RefreshReg$(_c, "Title");
-$RefreshReg$(_c1, "HeaderComponents");
-$RefreshReg$(_c2, "Body");
+$RefreshReg$(_c1, "Header");
+$RefreshReg$(_c2, "RestrauntCard");
+$RefreshReg$(_c3, "Body");
+$RefreshReg$(_c4, "Footer");
+$RefreshReg$(_c5, "AppLayout");
 
   $parcel$ReactRefreshHelpers$c1db.postlude(module);
 } finally {
