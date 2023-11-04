@@ -1,4 +1,4 @@
-import logoImage from "./images/Logo.png";
+import logoImage from "../../images/Logo.png";
 
 const Title = () => (
   <a href="/">
