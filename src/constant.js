@@ -1,31 +1,6 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import logoImage from "./images/Logo.png";
 import { v4 as uuidv4 } from 'uuid';
 
-const Title = () => (
-  <a href="/">
-    <img className="logo" src={logoImage} alt="logo"></img>
-  </a>
-);
-
-const Header = () => {
-  return (
-    <div className="header">
-      <Title />
-      <div className="nav-item">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const restaurantList=[
+export const restaurantList=[
     {
       "id": uuidv4(),
       "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbuN38lotdnj89kfeaqHsVvkIl8kuwu6qyA&usqp=CAU",
@@ -97,45 +72,3 @@ const restaurantList=[
       "rating": "4.6"
     }  
 ];
-
-const RestaurantCard = ({ image_link,name,cuisines,rating,id }) => {
-  return (
-    <div className="card">
-      <img src={image_link}></img>
-      <h2>{name}</h2>
-      <h3>{cuisines}</h3>
-      <h4>{rating} star</h4>
-    </div>
-  );
-};
-
-
-const Body = () => {
-  return (
-    <div className="restraunt-list">
-      {
-        restaurantList.map(restaurant => {
-          return <RestaurantCard {...restaurant} key={restaurant.id}></RestaurantCard>;
-        })
-      }
-    </div>
-  );
-};
-
-const Footer = () => {
-  return <h4>Footer</h4>;
-};
-
-const AppLayout = () => {
-  return (
-    <>
-      <Header />
-      <Body />
-      <Footer />
-    </>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(<AppLayout />);
