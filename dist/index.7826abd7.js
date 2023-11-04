@@ -3027,121 +3027,126 @@ const Header = ()=>{
     }, undefined);
 };
 _c1 = Header;
-const restrauntList = {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpISLzf2yeqCLYdGAm14256zLbsa4yI8hWEg&usqp=CAU",
-    name: "Pizza Place",
-    cusines: [
-        "Pizza",
-        "American"
-    ],
-    rating: "4.2"
-};
-const RestrauntCard = ()=>{
+const restaurantList = [
+    {
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbuN38lotdnj89kfeaqHsVvkIl8kuwu6qyA&usqp=CAU",
+        "name": "TORITOS Restaurant",
+        "cuisines": "American, Italian, Mexican",
+        "rating": "4.0"
+    },
+    {
+        "image_link": "https://d4t7t8y8xqo0t.cloudfront.net/resized/292X204/restaurant%2F642236%2F0.jpg",
+        "name": "Just Live Restaurant",
+        "cuisines": "American, Chinese, Italian, Mexican",
+        "rating": "4.2"
+    },
+    {
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZz5GnhDtlbAvyTbPN2lgC_TE3QwfPoU5Mig&usqp=CAU",
+        "name": "The Big Texan",
+        "cuisines": "American",
+        "rating": "4.5"
+    },
+    {
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdssKuO3X-R0TJHL06oF5CGuDK8NdytXgrbA&usqp=CAU",
+        "name": "China Garden",
+        "cuisines": "Chinese",
+        "rating": "4.7"
+    },
+    {
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF50K9q2dfg-uV3-nbrMxbJkV6CbcY2Ln3wA&usqp=CAU",
+        "name": "Little Italy",
+        "cuisines": "Italian",
+        "rating": "4.8"
+    },
+    {
+        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPlsXNT0cZixgcB5iZobs9XM3sj8oN5p-Hg&usqp=CAU",
+        "name": "Mexico City Restaurant",
+        "cuisines": "Mexican",
+        "rating": "4.9"
+    },
+    {
+        "image_link": "https://d1ralsognjng37.cloudfront.net/6ec4ca38-fb73-479b-865f-3464fbdb5ab3.webp",
+        "name": "The Yellow Chilli",
+        "cuisines": "North Indian, Chinese",
+        "rating": "4.3"
+    },
+    {
+        "image_link": "https://media-cdn.tripadvisor.com/media/photo-s/17/e2/fa/74/img20190610224410-largejpg.jpg",
+        "name": "Zaika",
+        "cuisines": "Mughlai, Chinese",
+        "rating": "4.4"
+    },
+    {
+        "image_link": "https://b.zmtcdn.com/data/pictures/chains/3/3001723/206973b45e3e43636e10ea448b814d48.jpg",
+        "name": "The Great Kebab Factory",
+        "cuisines": "Indian, Continental, Chinese",
+        "rating": "4.5"
+    },
+    {
+        "image_link": "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/9/h/n/p95-16444959626205045ab0b43.jpg?w=400",
+        "name": "Barbeque Nation",
+        "cuisines": "Indian, Chinese, Continental",
+        "rating": "4.6"
+    }
+];
+const RestaurantCard = ({ image_link, name, cuisines, rating })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: restrauntList.img
+                src: image_link
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 28,
+                lineNumber: 78,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: restrauntList.name
+                children: name
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 29,
+                lineNumber: 79,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: restrauntList.cusines.join(", ")
+                children: cuisines
             }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 30,
+                lineNumber: 80,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: [
-                    restrauntList.rating,
-                    " start"
+                    rating,
+                    " star"
                 ]
             }, void 0, true, {
                 fileName: "App.js",
-                lineNumber: 31,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "App.js",
-        lineNumber: 27,
+        lineNumber: 77,
         columnNumber: 10
     }, undefined);
 };
-_c2 = RestrauntCard;
+_c2 = RestaurantCard;
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restraunt-list",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
+        children: restaurantList.map((restaurant)=>{
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestaurantCard, {
+                ...restaurant
+            }, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 36,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 37,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 38,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 39,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 40,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 41,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 42,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 43,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 44,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 45,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(RestrauntCard, {}, void 0, false, {
-                fileName: "App.js",
-                lineNumber: 46,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+                lineNumber: 87,
+                columnNumber: 14
+            }, undefined);
+        })
+    }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 35,
+        lineNumber: 85,
         columnNumber: 10
     }, undefined);
 };
@@ -3151,7 +3156,7 @@ const Footer = ()=>{
         children: "Footer"
     }, void 0, false, {
         fileName: "App.js",
-        lineNumber: 50,
+        lineNumber: 92,
         columnNumber: 10
     }, undefined);
 };
@@ -3161,17 +3166,17 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 54,
+                lineNumber: 96,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 55,
+                lineNumber: 97,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Footer, {}, void 0, false, {
                 fileName: "App.js",
-                lineNumber: 56,
+                lineNumber: 98,
                 columnNumber: 7
             }, undefined)
         ]
@@ -3181,13 +3186,13 @@ _c5 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "App.js",
-    lineNumber: 60,
+    lineNumber: 102,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4, _c5;
 $RefreshReg$(_c, "Title");
 $RefreshReg$(_c1, "Header");
-$RefreshReg$(_c2, "RestrauntCard");
+$RefreshReg$(_c2, "RestaurantCard");
 $RefreshReg$(_c3, "Body");
 $RefreshReg$(_c4, "Footer");
 $RefreshReg$(_c5, "AppLayout");
