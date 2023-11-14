@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 
 const Body = () => {
-  let searchTxt = "Zaika";
+  const [searchInput,setSearchInput]=useState("Zaika");
+
   return (
     <>
       <div className="search-container">
@@ -10,8 +12,10 @@ const Body = () => {
           type="text"
           className="search-input"
           placeholder="Search"
-          value={searchTxt}
-          onChange={(e)=>console.log("malay")}
+          value={searchInput}
+          onChange={(e)=>{
+            setSearchInput(e.target.value);
+          }}
         />
         <button className="search-btn">Search</button>
       </div>
