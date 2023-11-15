@@ -2,8 +2,16 @@ import { useState } from "react";
 import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 
+function filterData(searchText, restaurants) {
+  return restaurants.filter((restaurant) => {
+    restaurant.name.includes(searchText);
+  });
+}
+
 const Body = () => {
-  const [searchInput,setSearchInput]=useState("Zaika");
+  const [searchText, setsearchText] = useState("Zaika");
+
+  const [restaurants, setRestaurants] = useState(restaurantList);
 
   return (
     <>
@@ -12,15 +20,23 @@ const Body = () => {
           type="text"
           className="search-input"
           placeholder="Search"
-          value={searchInput}
-          onChange={(e)=>{
-            setSearchInput(e.target.value);
+          value={searchText}
+          onChange={(e) => {
+            setsearchText(e.target.value);
           }}
         />
-        <button className="search-btn">Search</button>
+        <button
+          className="search-btn"
+          onClick={(e) => {
+            const data = filterData(searchText, restaurants);
+            setRestaurants(data);
+          }}
+        >
+          Search
+        </button>
       </div>
       <div className="restraunt-list">
-        {restaurantList.map((restaurant) => {
+        {restaurants.map((restaurant) => {
           return (
             <RestaurantCard
               {...restaurant}
