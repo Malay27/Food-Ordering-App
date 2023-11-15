@@ -4,12 +4,12 @@ import RestaurantCard from "./RestaurantCard";
 
 function filterData(searchText, restaurants) {
   return restaurants.filter((restaurant) => {
-    restaurant.name.includes(searchText);
+    return restaurant.name.includes(searchText)
   });
 }
 
 const Body = () => {
-  const [searchText, setsearchText] = useState("Zaika");
+  const [searchText, setsearchText] = useState("");
 
   const [restaurants, setRestaurants] = useState(restaurantList);
 
@@ -27,7 +27,7 @@ const Body = () => {
         />
         <button
           className="search-btn"
-          onClick={(e) => {
+          onClick={() => {
             const data = filterData(searchText, restaurants);
             setRestaurants(data);
           }}

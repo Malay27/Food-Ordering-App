@@ -27499,12 +27499,12 @@ var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
 var _s = $RefreshSig$();
 function filterData(searchText, restaurants) {
     return restaurants.filter((restaurant)=>{
-        restaurant.name.includes(searchText);
+        return restaurant.name.includes(searchText);
     });
 }
 const Body = ()=>{
     _s();
-    const [searchText, setsearchText] = (0, _react.useState)("Zaika");
+    const [searchText, setsearchText] = (0, _react.useState)("");
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constant.restaurantList));
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27526,7 +27526,7 @@ const Body = ()=>{
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "search-btn",
-                        onClick: (e)=>{
+                        onClick: ()=>{
                             const data = filterData(searchText, restaurants);
                             setRestaurants(data);
                         },
@@ -27564,7 +27564,7 @@ const Body = ()=>{
         ]
     }, void 0, true);
 };
-_s(Body, "Kzn2cCBbD/+hY/rTMKACuU65UO8=");
+_s(Body, "KLFttWOnxK9P/PbP3B1MVXDlvqE=");
 _c = Body;
 exports.default = Body;
 var _c;
