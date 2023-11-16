@@ -2,7 +2,7 @@ import { useState } from "react";
 import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 
-function filterData(searchText, restaurants) {
+function filterSearch(searchText, restaurants) {
   return restaurants.filter((restaurant) => {
     return restaurant.name.includes(searchText)
   });
@@ -28,7 +28,7 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterData(searchText, restaurants);
+            const data = filterSearch(searchText, restaurants);
             setRestaurants(data);
           }}
         >
