@@ -27506,6 +27506,10 @@ const Body = ()=>{
     _s();
     const [searchText, setsearchText] = (0, _react.useState)("");
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constant.restaurantList));
+    (0, _react.useEffect)(()=>{
+    // API call
+    }, []);
+    // console.log("render");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27521,7 +27525,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 14,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27533,13 +27537,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 17,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 13,
+                lineNumber: 19,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27550,7 +27554,7 @@ const Body = ()=>{
                         key: restaurant.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 26,
+                            lineNumber: 32,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27558,13 +27562,13 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 24,
+                lineNumber: 30,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(Body, "KLFttWOnxK9P/PbP3B1MVXDlvqE=");
+_s(Body, "m50HmgYmblK6bKu6a92rckZ8epE=");
 _c = Body;
 exports.default = Body;
 var _c;

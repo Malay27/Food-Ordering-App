@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 
-function filterSearch(searchText, restaurants) {
+function filterData(searchText, restaurants) {
   return restaurants.filter((restaurant) => {
     return restaurant.name.includes(searchText)
   });
@@ -12,6 +12,12 @@ const Body = () => {
   const [searchText, setsearchText] = useState("");
 
   const [restaurants, setRestaurants] = useState(restaurantList);
+
+  useEffect(()=>{
+    // API call
+  },[]);
+
+  // console.log("render");
 
   return (
     <>
@@ -28,7 +34,7 @@ const Body = () => {
         <button
           className="search-btn"
           onClick={() => {
-            const data = filterSearch(searchText, restaurants);
+            const data = filterData(searchText, restaurants);
             setRestaurants(data);
           }}
         >
