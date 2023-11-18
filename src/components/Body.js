@@ -4,7 +4,7 @@ import RestaurantCard from "./RestaurantCard";
 
 function filterData(searchText, restaurants) {
   return restaurants.filter((restaurant) => {
-    return restaurant.name.includes(searchText)
+    return restaurant.name.includes(searchText);
   });
 }
 
@@ -13,11 +13,17 @@ const Body = () => {
 
   const [restaurants, setRestaurants] = useState(restaurantList);
 
-  useEffect(()=>{
-    // API call
-  },[]);
+  useEffect(() => {
+    getRestaurants();
+  }, []);
 
-  // console.log("render");
+  async function getRestaurants(){
+    const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+    const json=await data.json();
+    console.log(json);
+console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.info);
+
+  }
 
   return (
     <>

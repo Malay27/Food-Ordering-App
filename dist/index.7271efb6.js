@@ -27507,9 +27507,14 @@ const Body = ()=>{
     const [searchText, setsearchText] = (0, _react.useState)("");
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constant.restaurantList));
     (0, _react.useEffect)(()=>{
-    // API call
+        getRestaurants();
     }, []);
-    // console.log("render");
+    async function getRestaurants() {
+        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        console.log(json);
+        console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.info);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27525,7 +27530,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 20,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27537,13 +27542,13 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 23,
+                        lineNumber: 26,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 19,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27554,7 +27559,7 @@ const Body = ()=>{
                         key: restaurant.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 32,
+                            lineNumber: 35,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27562,7 +27567,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 30,
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27583,6 +27588,7 @@ $RefreshReg$(_c, "Body");
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
 var _uuid = require("uuid");
 const restaurantList = [
     {
@@ -27656,6 +27662,7 @@ const restaurantList = [
         "rating": "4.6"
     }
 ];
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
 },{"uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j4KJi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
