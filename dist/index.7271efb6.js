@@ -27507,13 +27507,17 @@ const Body = ()=>{
     const [searchText, setsearchText] = (0, _react.useState)("");
     const [restaurants, setRestaurants] = (0, _react.useState)((0, _constant.restaurantList));
     (0, _react.useEffect)(()=>{
-        getRestaurants();
+    // getRestaurants();
     }, []);
     async function getRestaurants() {
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
-        console.log(json);
-        console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.info);
+        // console.log(json);
+        // console.log(json?.data?.cards[3]?.card);
+        // console.log(json?.data?.cards[3]?.card.card);
+        // console.log(json?.data?.cards[3]?.card.card.gridElements);
+        // console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle);
+        console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle.restaurants);
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
@@ -27530,7 +27534,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 23,
+                        lineNumber: 27,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27542,24 +27546,24 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 26,
+                        lineNumber: 30,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 22,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "restraunt-list",
                 children: restaurants.map((restaurant)=>{
                     return /*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
-                        ...restaurant,
-                        key: restaurant.id,
+                        ...restaurant?.info,
+                        key: restaurant?.info?.id,
                         __source: {
                             fileName: "src/components/Body.js",
-                            lineNumber: 35,
+                            lineNumber: 39,
                             columnNumber: 16
                         },
                         __self: undefined
@@ -27567,7 +27571,7 @@ const Body = ()=>{
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 33,
+                lineNumber: 37,
                 columnNumber: 7
             }, undefined)
         ]
@@ -27587,82 +27591,969 @@ $RefreshReg$(_c, "Body");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constant":"jVIFP","./RestaurantCard":"bMboU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
 parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
 var _uuid = require("uuid");
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 const restaurantList = [
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbuN38lotdnj89kfeaqHsVvkIl8kuwu6qyA&usqp=CAU",
-        "name": "TORITOS Restaurant",
-        "cuisines": "American, Italian, Mexican",
-        "rating": "4.0"
+        "info": {
+            "id": "50641",
+            "name": "Way Down South Restaurant",
+            "cloudinaryImageId": "ddjiab7vlmrgfhwelrcn",
+            "locality": "Baner",
+            "areaName": "Baner",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "South Indian",
+                "North Indian",
+                "Thalis",
+                "Beverages"
+            ],
+            "avgRating": 4.2,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "50641",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 5100
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 5100
+            },
+            "parentId": "225420",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "10K+",
+            "promoted": true,
+            "adTrackingId": "cid=9116479~p=1~eid=0000018b-e5ff-7cce-16b4-fb2d00ff0132~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 39,
+                "lastMileTravel": 5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "39 mins",
+                "lastMileTravelString": "5.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 22:30:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "30% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off up to \u20B975 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/way-down-south-restaurant-baner-pune-50641",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://d4t7t8y8xqo0t.cloudfront.net/resized/292X204/restaurant%2F642236%2F0.jpg",
-        "name": "Just Live Restaurant",
-        "cuisines": "American, Chinese, Italian, Mexican",
-        "rating": "4.2"
+        "info": {
+            "id": "245348",
+            "name": "Oye Kiddan",
+            "cloudinaryImageId": "poymismten2l3pbit1ui",
+            "locality": "Jambulkar Nagar",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "North Indian",
+                "Punjabi",
+                "Thalis",
+                "Desserts"
+            ],
+            "avgRating": 4,
+            "feeDetails": {
+                "restaurantId": "245348",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "690",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 19,
+                "lastMileTravel": 0.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "19 mins",
+                "lastMileTravelString": "0.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 16:00:00",
+                "opened": true
+            },
+            "badges": {
+                "textExtendedBadges": [
+                    {
+                        "iconId": "guiltfree/GF_Logo_android_3x",
+                        "shortDescription": "options available",
+                        "fontColor": "#7E808C"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9125 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use FLAT125",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "Flat \u20B9125 off on orders above \u20B9249 | Use code FLAT125",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "",
+                                    "fontColor": "#7E808C",
+                                    "iconId": "guiltfree/GF_Logo_android_3x",
+                                    "shortDescription": "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/oye-kiddan-jambulkar-nagar-hinjawadi-pune-245348",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZz5GnhDtlbAvyTbPN2lgC_TE3QwfPoU5Mig&usqp=CAU",
-        "name": "The Big Texan",
-        "cuisines": "American",
-        "rating": "4.5"
+        "info": {
+            "id": "765035",
+            "name": "Dadu's Sweet Emporio",
+            "cloudinaryImageId": "2b8aa7f4ea082d5209cebd505f41cc24",
+            "locality": "P N Commercial Spaces",
+            "areaName": "Wakad",
+            "costForTwo": "\u20B9350 for two",
+            "cuisines": [
+                "Indian",
+                "Sweets",
+                "Chaat",
+                "Snacks",
+                "Beverages"
+            ],
+            "avgRating": 4.6,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "765035",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3900
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3900
+            },
+            "parentId": "5789",
+            "avgRatingString": "4.6",
+            "totalRatingsString": "100+",
+            "promoted": true,
+            "adTrackingId": "cid=9356510~p=2~eid=0000018b-e5ff-7cce-16b4-fb2e00ff0251~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "25 mins",
+                "lastMileTravelString": "3.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 22:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "isNewlyOnboarded": true,
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/dadus-sweet-emporio-p-n-commercial-spaces-wakad-pune-765035",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdssKuO3X-R0TJHL06oF5CGuDK8NdytXgrbA&usqp=CAU",
-        "name": "China Garden",
-        "cuisines": "Chinese",
-        "rating": "4.7"
+        "info": {
+            "id": "4872",
+            "name": "Ghar Ka Khana - Since 2005",
+            "cloudinaryImageId": "f7b365c641d99818f272b5490f034226",
+            "locality": "Rajiv Gandhi Infotech Park",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "North Indian",
+                "Punjabi",
+                "Thalis",
+                "Kebabs",
+                "Chinese"
+            ],
+            "avgRating": 4.1,
+            "feeDetails": {
+                "restaurantId": "4872",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "22458",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 24,
+                "lastMileTravel": 0.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "24 mins",
+                "lastMileTravelString": "0.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 15:55:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "50% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to \u20B9100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/ghar-ka-khana-since-2005-rajiv-gandhi-infotech-park-hinjawadi-pune-4872",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTF50K9q2dfg-uV3-nbrMxbJkV6CbcY2Ln3wA&usqp=CAU",
-        "name": "Little Italy",
-        "cuisines": "Italian",
-        "rating": "4.8"
+        "info": {
+            "id": "71607",
+            "name": "Hotel Vijay",
+            "cloudinaryImageId": "iujdgczww7oxjjuv0jxz",
+            "locality": "Shivaji Chowk",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "South Indian"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "71607",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "103305",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "5K+",
+            "promoted": true,
+            "adTrackingId": "cid=9115560~p=3~eid=0000018b-e5ff-7cce-16b4-fb2f00ff037a~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 34,
+                "lastMileTravel": 1.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "34 mins",
+                "lastMileTravelString": "1.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "60% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to \u20B9120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/hotel-vijay-shivaji-chowk-hinjawadi-pune-71607",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPlsXNT0cZixgcB5iZobs9XM3sj8oN5p-Hg&usqp=CAU",
-        "name": "Mexico City Restaurant",
-        "cuisines": "Mexican",
-        "rating": "4.9"
+        "info": {
+            "id": "395196",
+            "name": "McDonald's Gourmet Burger Collection",
+            "cloudinaryImageId": "zteez26u0kyxhgcttlhs",
+            "locality": "Marunji Road",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9600 for two",
+            "cuisines": [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            "avgRating": 4.3,
+            "feeDetails": {
+                "restaurantId": "395196",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3200
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3200
+            },
+            "parentId": "10761",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "50+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 0.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "18 mins",
+                "lastMileTravelString": "0.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-20 03:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-gourmet-burger-collection-marunji-road-hinjawadi-pune-395196",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://d1ralsognjng37.cloudfront.net/6ec4ca38-fb73-479b-865f-3464fbdb5ab3.webp",
-        "name": "The Yellow Chilli",
-        "cuisines": "North Indian, Chinese",
-        "rating": "4.3"
+        "info": {
+            "id": "24648",
+            "name": "Mr & Mrs Idly",
+            "cloudinaryImageId": "9bb6de596aef6f45994dbd51163ee2d9",
+            "locality": "Pimple Saudagar",
+            "areaName": "Pimple Saudagar",
+            "costForTwo": "\u20B9190 for two",
+            "cuisines": [
+                "South Indian",
+                "Chinese"
+            ],
+            "avgRating": 4.1,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "24648",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 5700
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 5700
+            },
+            "parentId": "388168",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "10K+",
+            "promoted": true,
+            "adTrackingId": "cid=9201757~p=4~eid=0000018b-e5ff-7cce-16b4-fb3000ff0454~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 6.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "42 mins",
+                "lastMileTravelString": "6.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 14:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "15% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "15% off up to \u20B945 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mr-and-mrs-idly-pimple-saudagar-pune-24648",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://media-cdn.tripadvisor.com/media/photo-s/17/e2/fa/74/img20190610224410-largejpg.jpg",
-        "name": "Zaika",
-        "cuisines": "Mughlai, Chinese",
-        "rating": "4.4"
+        "info": {
+            "id": "23716",
+            "name": "McDonald's",
+            "cloudinaryImageId": "bb7ae131544c7d37e10fc5faf76f09d6",
+            "locality": "Marunji Road",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            "avgRating": 4.3,
+            "feeDetails": {
+                "restaurantId": "23716",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3200
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3200
+            },
+            "parentId": "630",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 0.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20 mins",
+                "lastMileTravelString": "0.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-20 03:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-marunji-road-hinjawadi-pune-23716",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     },
     {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://b.zmtcdn.com/data/pictures/chains/3/3001723/206973b45e3e43636e10ea448b814d48.jpg",
-        "name": "The Great Kebab Factory",
-        "cuisines": "Indian, Continental, Chinese",
-        "rating": "4.5"
-    },
-    {
-        "id": (0, _uuid.v4)(),
-        "image_link": "https://im1.dineout.co.in/images/uploads/restaurant/sharpen/9/h/n/p95-16444959626205045ab0b43.jpg?w=400",
-        "name": "Barbeque Nation",
-        "cuisines": "Indian, Chinese, Continental",
-        "rating": "4.6"
+        "info": {
+            "id": "152615",
+            "name": "Indori Sarafa",
+            "cloudinaryImageId": "juyjygryzmxvjthqiyeg",
+            "locality": "Wakad",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Snacks",
+                "Chaat",
+                "Street Food",
+                "North Indian"
+            ],
+            "avgRating": 4,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "152615",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "107005",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "5K+",
+            "promoted": true,
+            "adTrackingId": "cid=9221580~p=5~eid=0000018b-e5ff-7cce-16b4-fb3100ff056c~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 21,
+                "lastMileTravel": 1.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "21 mins",
+                "lastMileTravelString": "1.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 23:59:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B975 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use BFBINGE",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT75 off | Use BFBINGE",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/indori-sarafa-wakad-hinjawadi-pune-152615",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
     }
 ];
-const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
 
 },{"uuid":"j4KJi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"j4KJi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -27695,38 +28586,76 @@ var _stringifyJsDefault = parcelHelpers.interopDefault(_stringifyJs);
 var _parseJs = require("./parse.js");
 var _parseJsDefault = parcelHelpers.interopDefault(_parseJs);
 
-},{"./v1.js":false,"./v3.js":false,"./v4.js":"8zJtu","./v5.js":false,"./nil.js":false,"./version.js":false,"./validate.js":false,"./stringify.js":false,"./parse.js":false,"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8zJtu":[function(require,module,exports) {
+},{"./v1.js":"9qfh9","./v3.js":"3RlI2","./v4.js":"8zJtu","./v5.js":"i3cfs","./nil.js":"kcLFq","./version.js":"gvRcF","./validate.js":"eHPgI","./stringify.js":"5Y9F1","./parse.js":"6aVVs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9qfh9":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-var _nativeJs = require("./native.js");
-var _nativeJsDefault = parcelHelpers.interopDefault(_nativeJs);
 var _rngJs = require("./rng.js");
 var _rngJsDefault = parcelHelpers.interopDefault(_rngJs);
-var _stringifyJs = require("./stringify.js");
-function v4(options, buf, offset) {
-    if ((0, _nativeJsDefault.default).randomUUID && !buf && !options) return (0, _nativeJsDefault.default).randomUUID();
+var _stringifyJs = require("./stringify.js"); // **`v1()` - Generate time-based UUID**
+//
+// Inspired by https://github.com/LiosK/UUID.js
+// and http://docs.python.org/library/uuid.html
+let _nodeId;
+let _clockseq; // Previous uuid creation time
+let _lastMSecs = 0;
+let _lastNSecs = 0; // See https://github.com/uuidjs/uuid for API details
+function v1(options, buf, offset) {
+    let i = buf && offset || 0;
+    const b = buf || new Array(16);
     options = options || {};
-    const rnds = options.random || (options.rng || (0, _rngJsDefault.default))(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
-    rnds[6] = rnds[6] & 0x0f | 0x40;
-    rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
-    if (buf) {
-        offset = offset || 0;
-        for(let i = 0; i < 16; ++i)buf[offset + i] = rnds[i];
-        return buf;
-    }
-    return (0, _stringifyJs.unsafeStringify)(rnds);
+    let node = options.node || _nodeId;
+    let clockseq = options.clockseq !== undefined ? options.clockseq : _clockseq; // node and clockseq need to be initialized to random values if they're not
+    // specified.  We do this lazily to minimize issues related to insufficient
+    // system entropy.  See #189
+    if (node == null || clockseq == null) {
+        const seedBytes = options.random || (options.rng || (0, _rngJsDefault.default))();
+        if (node == null) // Per 4.5, create and 48-bit node id, (47 random bits + multicast bit = 1)
+        node = _nodeId = [
+            seedBytes[0] | 0x01,
+            seedBytes[1],
+            seedBytes[2],
+            seedBytes[3],
+            seedBytes[4],
+            seedBytes[5]
+        ];
+        if (clockseq == null) // Per 4.2.2, randomize (14 bit) clockseq
+        clockseq = _clockseq = (seedBytes[6] << 8 | seedBytes[7]) & 0x3fff;
+    } // UUID timestamps are 100 nano-second units since the Gregorian epoch,
+    // (1582-10-15 00:00).  JSNumbers aren't precise enough for this, so
+    // time is handled internally as 'msecs' (integer milliseconds) and 'nsecs'
+    // (100-nanoseconds offset from msecs) since unix epoch, 1970-01-01 00:00.
+    let msecs = options.msecs !== undefined ? options.msecs : Date.now(); // Per 4.2.1.2, use count of uuid's generated during the current clock
+    // cycle to simulate higher resolution clock
+    let nsecs = options.nsecs !== undefined ? options.nsecs : _lastNSecs + 1; // Time since last uuid creation (in msecs)
+    const dt = msecs - _lastMSecs + (nsecs - _lastNSecs) / 10000; // Per 4.2.1.2, Bump clockseq on clock regression
+    if (dt < 0 && options.clockseq === undefined) clockseq = clockseq + 1 & 0x3fff;
+     // Reset nsecs if clock regresses (new clockseq) or we've moved onto a new
+    // time interval
+    if ((dt < 0 || msecs > _lastMSecs) && options.nsecs === undefined) nsecs = 0;
+     // Per 4.2.1.2 Throw error if too many uuids are requested
+    if (nsecs >= 10000) throw new Error("uuid.v1(): Can't create more than 10M uuids/sec");
+    _lastMSecs = msecs;
+    _lastNSecs = nsecs;
+    _clockseq = clockseq; // Per 4.1.4 - Convert from unix epoch to Gregorian epoch
+    msecs += 12219292800000; // `time_low`
+    const tl = ((msecs & 0xfffffff) * 10000 + nsecs) % 0x100000000;
+    b[i++] = tl >>> 24 & 0xff;
+    b[i++] = tl >>> 16 & 0xff;
+    b[i++] = tl >>> 8 & 0xff;
+    b[i++] = tl & 0xff; // `time_mid`
+    const tmh = msecs / 0x100000000 * 10000 & 0xfffffff;
+    b[i++] = tmh >>> 8 & 0xff;
+    b[i++] = tmh & 0xff; // `time_high_and_version`
+    b[i++] = tmh >>> 24 & 0xf | 0x10; // include version
+    b[i++] = tmh >>> 16 & 0xff; // `clock_seq_hi_and_reserved` (Per 4.2.2 - include variant)
+    b[i++] = clockseq >>> 8 | 0x80; // `clock_seq_low`
+    b[i++] = clockseq & 0xff; // `node`
+    for(let n = 0; n < 6; ++n)b[i + n] = node[n];
+    return buf || (0, _stringifyJs.unsafeStringify)(b);
 }
-exports.default = v4;
+exports.default = v1;
 
-},{"./native.js":"lYayS","./rng.js":"2psyE","./stringify.js":"5Y9F1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lYayS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-const randomUUID = typeof crypto !== "undefined" && crypto.randomUUID && crypto.randomUUID.bind(crypto);
-exports.default = {
-    randomUUID
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2psyE":[function(require,module,exports) {
+},{"./rng.js":"2psyE","./stringify.js":"5Y9F1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2psyE":[function(require,module,exports) {
 // Unique ID creation requires a high quality random # generator. In the browser we therefore
 // require the crypto API and do not support built-in fallback to lower quality random number
 // generators (like Math.random()).
@@ -27787,7 +28716,432 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 exports.default = /^(?:[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}|00000000-0000-0000-0000-000000000000)$/i;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"3RlI2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _v35Js = require("./v35.js");
+var _v35JsDefault = parcelHelpers.interopDefault(_v35Js);
+var _md5Js = require("./md5.js");
+var _md5JsDefault = parcelHelpers.interopDefault(_md5Js);
+const v3 = (0, _v35JsDefault.default)("v3", 0x30, (0, _md5JsDefault.default));
+exports.default = v3;
+
+},{"./v35.js":"f7cVj","./md5.js":"k0SFu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"f7cVj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "DNS", ()=>DNS);
+parcelHelpers.export(exports, "URL", ()=>URL);
+parcelHelpers.export(exports, "default", ()=>v35);
+var _stringifyJs = require("./stringify.js");
+var _parseJs = require("./parse.js");
+var _parseJsDefault = parcelHelpers.interopDefault(_parseJs);
+function stringToBytes(str) {
+    str = unescape(encodeURIComponent(str)); // UTF8 escape
+    const bytes = [];
+    for(let i = 0; i < str.length; ++i)bytes.push(str.charCodeAt(i));
+    return bytes;
+}
+const DNS = "6ba7b810-9dad-11d1-80b4-00c04fd430c8";
+const URL = "6ba7b811-9dad-11d1-80b4-00c04fd430c8";
+function v35(name, version, hashfunc) {
+    function generateUUID(value, namespace, buf, offset) {
+        var _namespace;
+        if (typeof value === "string") value = stringToBytes(value);
+        if (typeof namespace === "string") namespace = (0, _parseJsDefault.default)(namespace);
+        if (((_namespace = namespace) === null || _namespace === void 0 ? void 0 : _namespace.length) !== 16) throw TypeError("Namespace must be array-like (16 iterable integer values, 0-255)");
+         // Compute hash of namespace and value, Per 4.3
+        // Future: Use spread syntax when supported on all platforms, e.g. `bytes =
+        // hashfunc([...namespace, ... value])`
+        let bytes = new Uint8Array(16 + value.length);
+        bytes.set(namespace);
+        bytes.set(value, namespace.length);
+        bytes = hashfunc(bytes);
+        bytes[6] = bytes[6] & 0x0f | version;
+        bytes[8] = bytes[8] & 0x3f | 0x80;
+        if (buf) {
+            offset = offset || 0;
+            for(let i = 0; i < 16; ++i)buf[offset + i] = bytes[i];
+            return buf;
+        }
+        return (0, _stringifyJs.unsafeStringify)(bytes);
+    } // Function#name is not settable on some platforms (#270)
+    try {
+        generateUUID.name = name; // eslint-disable-next-line no-empty
+    } catch (err) {} // For CommonJS default export support
+    generateUUID.DNS = DNS;
+    generateUUID.URL = URL;
+    return generateUUID;
+}
+
+},{"./stringify.js":"5Y9F1","./parse.js":"6aVVs","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6aVVs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _validateJs = require("./validate.js");
+var _validateJsDefault = parcelHelpers.interopDefault(_validateJs);
+function parse(uuid) {
+    if (!(0, _validateJsDefault.default)(uuid)) throw TypeError("Invalid UUID");
+    let v;
+    const arr = new Uint8Array(16); // Parse ########-....-....-....-............
+    arr[0] = (v = parseInt(uuid.slice(0, 8), 16)) >>> 24;
+    arr[1] = v >>> 16 & 0xff;
+    arr[2] = v >>> 8 & 0xff;
+    arr[3] = v & 0xff; // Parse ........-####-....-....-............
+    arr[4] = (v = parseInt(uuid.slice(9, 13), 16)) >>> 8;
+    arr[5] = v & 0xff; // Parse ........-....-####-....-............
+    arr[6] = (v = parseInt(uuid.slice(14, 18), 16)) >>> 8;
+    arr[7] = v & 0xff; // Parse ........-....-....-####-............
+    arr[8] = (v = parseInt(uuid.slice(19, 23), 16)) >>> 8;
+    arr[9] = v & 0xff; // Parse ........-....-....-....-############
+    // (Use "/" to avoid 32-bit truncation when bit-shifting high-order bytes)
+    arr[10] = (v = parseInt(uuid.slice(24, 36), 16)) / 0x10000000000 & 0xff;
+    arr[11] = v / 0x100000000 & 0xff;
+    arr[12] = v >>> 24 & 0xff;
+    arr[13] = v >>> 16 & 0xff;
+    arr[14] = v >>> 8 & 0xff;
+    arr[15] = v & 0xff;
+    return arr;
+}
+exports.default = parse;
+
+},{"./validate.js":"eHPgI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"k0SFu":[function(require,module,exports) {
+/*
+ * Browser-compatible JavaScript MD5
+ *
+ * Modification of JavaScript MD5
+ * https://github.com/blueimp/JavaScript-MD5
+ *
+ * Copyright 2011, Sebastian Tschan
+ * https://blueimp.net
+ *
+ * Licensed under the MIT license:
+ * https://opensource.org/licenses/MIT
+ *
+ * Based on
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function md5(bytes) {
+    if (typeof bytes === "string") {
+        const msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
+        bytes = new Uint8Array(msg.length);
+        for(let i = 0; i < msg.length; ++i)bytes[i] = msg.charCodeAt(i);
+    }
+    return md5ToHexEncodedArray(wordsToMd5(bytesToWords(bytes), bytes.length * 8));
+}
+/*
+ * Convert an array of little-endian words to an array of bytes
+ */ function md5ToHexEncodedArray(input) {
+    const output = [];
+    const length32 = input.length * 32;
+    const hexTab = "0123456789abcdef";
+    for(let i = 0; i < length32; i += 8){
+        const x = input[i >> 5] >>> i % 32 & 0xff;
+        const hex = parseInt(hexTab.charAt(x >>> 4 & 0x0f) + hexTab.charAt(x & 0x0f), 16);
+        output.push(hex);
+    }
+    return output;
+}
+/**
+ * Calculate output length with padding and bit length
+ */ function getOutputLength(inputLength8) {
+    return (inputLength8 + 64 >>> 9 << 4) + 14 + 1;
+}
+/*
+ * Calculate the MD5 of an array of little-endian words, and a bit length.
+ */ function wordsToMd5(x, len) {
+    /* append padding */ x[len >> 5] |= 0x80 << len % 32;
+    x[getOutputLength(len) - 1] = len;
+    let a = 1732584193;
+    let b = -271733879;
+    let c = -1732584194;
+    let d = 271733878;
+    for(let i = 0; i < x.length; i += 16){
+        const olda = a;
+        const oldb = b;
+        const oldc = c;
+        const oldd = d;
+        a = md5ff(a, b, c, d, x[i], 7, -680876936);
+        d = md5ff(d, a, b, c, x[i + 1], 12, -389564586);
+        c = md5ff(c, d, a, b, x[i + 2], 17, 606105819);
+        b = md5ff(b, c, d, a, x[i + 3], 22, -1044525330);
+        a = md5ff(a, b, c, d, x[i + 4], 7, -176418897);
+        d = md5ff(d, a, b, c, x[i + 5], 12, 1200080426);
+        c = md5ff(c, d, a, b, x[i + 6], 17, -1473231341);
+        b = md5ff(b, c, d, a, x[i + 7], 22, -45705983);
+        a = md5ff(a, b, c, d, x[i + 8], 7, 1770035416);
+        d = md5ff(d, a, b, c, x[i + 9], 12, -1958414417);
+        c = md5ff(c, d, a, b, x[i + 10], 17, -42063);
+        b = md5ff(b, c, d, a, x[i + 11], 22, -1990404162);
+        a = md5ff(a, b, c, d, x[i + 12], 7, 1804603682);
+        d = md5ff(d, a, b, c, x[i + 13], 12, -40341101);
+        c = md5ff(c, d, a, b, x[i + 14], 17, -1502002290);
+        b = md5ff(b, c, d, a, x[i + 15], 22, 1236535329);
+        a = md5gg(a, b, c, d, x[i + 1], 5, -165796510);
+        d = md5gg(d, a, b, c, x[i + 6], 9, -1069501632);
+        c = md5gg(c, d, a, b, x[i + 11], 14, 643717713);
+        b = md5gg(b, c, d, a, x[i], 20, -373897302);
+        a = md5gg(a, b, c, d, x[i + 5], 5, -701558691);
+        d = md5gg(d, a, b, c, x[i + 10], 9, 38016083);
+        c = md5gg(c, d, a, b, x[i + 15], 14, -660478335);
+        b = md5gg(b, c, d, a, x[i + 4], 20, -405537848);
+        a = md5gg(a, b, c, d, x[i + 9], 5, 568446438);
+        d = md5gg(d, a, b, c, x[i + 14], 9, -1019803690);
+        c = md5gg(c, d, a, b, x[i + 3], 14, -187363961);
+        b = md5gg(b, c, d, a, x[i + 8], 20, 1163531501);
+        a = md5gg(a, b, c, d, x[i + 13], 5, -1444681467);
+        d = md5gg(d, a, b, c, x[i + 2], 9, -51403784);
+        c = md5gg(c, d, a, b, x[i + 7], 14, 1735328473);
+        b = md5gg(b, c, d, a, x[i + 12], 20, -1926607734);
+        a = md5hh(a, b, c, d, x[i + 5], 4, -378558);
+        d = md5hh(d, a, b, c, x[i + 8], 11, -2022574463);
+        c = md5hh(c, d, a, b, x[i + 11], 16, 1839030562);
+        b = md5hh(b, c, d, a, x[i + 14], 23, -35309556);
+        a = md5hh(a, b, c, d, x[i + 1], 4, -1530992060);
+        d = md5hh(d, a, b, c, x[i + 4], 11, 1272893353);
+        c = md5hh(c, d, a, b, x[i + 7], 16, -155497632);
+        b = md5hh(b, c, d, a, x[i + 10], 23, -1094730640);
+        a = md5hh(a, b, c, d, x[i + 13], 4, 681279174);
+        d = md5hh(d, a, b, c, x[i], 11, -358537222);
+        c = md5hh(c, d, a, b, x[i + 3], 16, -722521979);
+        b = md5hh(b, c, d, a, x[i + 6], 23, 76029189);
+        a = md5hh(a, b, c, d, x[i + 9], 4, -640364487);
+        d = md5hh(d, a, b, c, x[i + 12], 11, -421815835);
+        c = md5hh(c, d, a, b, x[i + 15], 16, 530742520);
+        b = md5hh(b, c, d, a, x[i + 2], 23, -995338651);
+        a = md5ii(a, b, c, d, x[i], 6, -198630844);
+        d = md5ii(d, a, b, c, x[i + 7], 10, 1126891415);
+        c = md5ii(c, d, a, b, x[i + 14], 15, -1416354905);
+        b = md5ii(b, c, d, a, x[i + 5], 21, -57434055);
+        a = md5ii(a, b, c, d, x[i + 12], 6, 1700485571);
+        d = md5ii(d, a, b, c, x[i + 3], 10, -1894986606);
+        c = md5ii(c, d, a, b, x[i + 10], 15, -1051523);
+        b = md5ii(b, c, d, a, x[i + 1], 21, -2054922799);
+        a = md5ii(a, b, c, d, x[i + 8], 6, 1873313359);
+        d = md5ii(d, a, b, c, x[i + 15], 10, -30611744);
+        c = md5ii(c, d, a, b, x[i + 6], 15, -1560198380);
+        b = md5ii(b, c, d, a, x[i + 13], 21, 1309151649);
+        a = md5ii(a, b, c, d, x[i + 4], 6, -145523070);
+        d = md5ii(d, a, b, c, x[i + 11], 10, -1120210379);
+        c = md5ii(c, d, a, b, x[i + 2], 15, 718787259);
+        b = md5ii(b, c, d, a, x[i + 9], 21, -343485551);
+        a = safeAdd(a, olda);
+        b = safeAdd(b, oldb);
+        c = safeAdd(c, oldc);
+        d = safeAdd(d, oldd);
+    }
+    return [
+        a,
+        b,
+        c,
+        d
+    ];
+}
+/*
+ * Convert an array bytes to an array of little-endian words
+ * Characters >255 have their high-byte silently ignored.
+ */ function bytesToWords(input) {
+    if (input.length === 0) return [];
+    const length8 = input.length * 8;
+    const output = new Uint32Array(getOutputLength(length8));
+    for(let i = 0; i < length8; i += 8)output[i >> 5] |= (input[i / 8] & 0xff) << i % 32;
+    return output;
+}
+/*
+ * Add integers, wrapping at 2^32. This uses 16-bit operations internally
+ * to work around bugs in some JS interpreters.
+ */ function safeAdd(x, y) {
+    const lsw = (x & 0xffff) + (y & 0xffff);
+    const msw = (x >> 16) + (y >> 16) + (lsw >> 16);
+    return msw << 16 | lsw & 0xffff;
+}
+/*
+ * Bitwise rotate a 32-bit number to the left.
+ */ function bitRotateLeft(num, cnt) {
+    return num << cnt | num >>> 32 - cnt;
+}
+/*
+ * These functions implement the four basic operations the algorithm uses.
+ */ function md5cmn(q, a, b, x, s, t) {
+    return safeAdd(bitRotateLeft(safeAdd(safeAdd(a, q), safeAdd(x, t)), s), b);
+}
+function md5ff(a, b, c, d, x, s, t) {
+    return md5cmn(b & c | ~b & d, a, b, x, s, t);
+}
+function md5gg(a, b, c, d, x, s, t) {
+    return md5cmn(b & d | c & ~d, a, b, x, s, t);
+}
+function md5hh(a, b, c, d, x, s, t) {
+    return md5cmn(b ^ c ^ d, a, b, x, s, t);
+}
+function md5ii(a, b, c, d, x, s, t) {
+    return md5cmn(c ^ (b | ~d), a, b, x, s, t);
+}
+exports.default = md5;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8zJtu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeJs = require("./native.js");
+var _nativeJsDefault = parcelHelpers.interopDefault(_nativeJs);
+var _rngJs = require("./rng.js");
+var _rngJsDefault = parcelHelpers.interopDefault(_rngJs);
+var _stringifyJs = require("./stringify.js");
+function v4(options, buf, offset) {
+    if ((0, _nativeJsDefault.default).randomUUID && !buf && !options) return (0, _nativeJsDefault.default).randomUUID();
+    options = options || {};
+    const rnds = options.random || (options.rng || (0, _rngJsDefault.default))(); // Per 4.4, set bits for version and `clock_seq_hi_and_reserved`
+    rnds[6] = rnds[6] & 0x0f | 0x40;
+    rnds[8] = rnds[8] & 0x3f | 0x80; // Copy bytes to buffer, if provided
+    if (buf) {
+        offset = offset || 0;
+        for(let i = 0; i < 16; ++i)buf[offset + i] = rnds[i];
+        return buf;
+    }
+    return (0, _stringifyJs.unsafeStringify)(rnds);
+}
+exports.default = v4;
+
+},{"./native.js":"lYayS","./rng.js":"2psyE","./stringify.js":"5Y9F1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lYayS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const randomUUID = typeof crypto !== "undefined" && crypto.randomUUID && crypto.randomUUID.bind(crypto);
+exports.default = {
+    randomUUID
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i3cfs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _v35Js = require("./v35.js");
+var _v35JsDefault = parcelHelpers.interopDefault(_v35Js);
+var _sha1Js = require("./sha1.js");
+var _sha1JsDefault = parcelHelpers.interopDefault(_sha1Js);
+const v5 = (0, _v35JsDefault.default)("v5", 0x50, (0, _sha1JsDefault.default));
+exports.default = v5;
+
+},{"./v35.js":"f7cVj","./sha1.js":"BVVut","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"BVVut":[function(require,module,exports) {
+// Adapted from Chris Veness' SHA1 code at
+// http://www.movable-type.co.uk/scripts/sha1.html
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function f(s, x, y, z) {
+    switch(s){
+        case 0:
+            return x & y ^ ~x & z;
+        case 1:
+            return x ^ y ^ z;
+        case 2:
+            return x & y ^ x & z ^ y & z;
+        case 3:
+            return x ^ y ^ z;
+    }
+}
+function ROTL(x, n) {
+    return x << n | x >>> 32 - n;
+}
+function sha1(bytes) {
+    const K = [
+        0x5a827999,
+        0x6ed9eba1,
+        0x8f1bbcdc,
+        0xca62c1d6
+    ];
+    const H = [
+        0x67452301,
+        0xefcdab89,
+        0x98badcfe,
+        0x10325476,
+        0xc3d2e1f0
+    ];
+    if (typeof bytes === "string") {
+        const msg = unescape(encodeURIComponent(bytes)); // UTF8 escape
+        bytes = [];
+        for(let i = 0; i < msg.length; ++i)bytes.push(msg.charCodeAt(i));
+    } else if (!Array.isArray(bytes)) // Convert Array-like to Array
+    bytes = Array.prototype.slice.call(bytes);
+    bytes.push(0x80);
+    const l = bytes.length / 4 + 2;
+    const N = Math.ceil(l / 16);
+    const M = new Array(N);
+    for(let i = 0; i < N; ++i){
+        const arr = new Uint32Array(16);
+        for(let j = 0; j < 16; ++j)arr[j] = bytes[i * 64 + j * 4] << 24 | bytes[i * 64 + j * 4 + 1] << 16 | bytes[i * 64 + j * 4 + 2] << 8 | bytes[i * 64 + j * 4 + 3];
+        M[i] = arr;
+    }
+    M[N - 1][14] = (bytes.length - 1) * 8 / Math.pow(2, 32);
+    M[N - 1][14] = Math.floor(M[N - 1][14]);
+    M[N - 1][15] = (bytes.length - 1) * 8 & 0xffffffff;
+    for(let i = 0; i < N; ++i){
+        const W = new Uint32Array(80);
+        for(let t = 0; t < 16; ++t)W[t] = M[i][t];
+        for(let t = 16; t < 80; ++t)W[t] = ROTL(W[t - 3] ^ W[t - 8] ^ W[t - 14] ^ W[t - 16], 1);
+        let a = H[0];
+        let b = H[1];
+        let c = H[2];
+        let d = H[3];
+        let e = H[4];
+        for(let t = 0; t < 80; ++t){
+            const s = Math.floor(t / 20);
+            const T = ROTL(a, 5) + f(s, b, c, d) + e + K[s] + W[t] >>> 0;
+            e = d;
+            d = c;
+            c = ROTL(b, 30) >>> 0;
+            b = a;
+            a = T;
+        }
+        H[0] = H[0] + a >>> 0;
+        H[1] = H[1] + b >>> 0;
+        H[2] = H[2] + c >>> 0;
+        H[3] = H[3] + d >>> 0;
+        H[4] = H[4] + e >>> 0;
+    }
+    return [
+        H[0] >> 24 & 0xff,
+        H[0] >> 16 & 0xff,
+        H[0] >> 8 & 0xff,
+        H[0] & 0xff,
+        H[1] >> 24 & 0xff,
+        H[1] >> 16 & 0xff,
+        H[1] >> 8 & 0xff,
+        H[1] & 0xff,
+        H[2] >> 24 & 0xff,
+        H[2] >> 16 & 0xff,
+        H[2] >> 8 & 0xff,
+        H[2] & 0xff,
+        H[3] >> 24 & 0xff,
+        H[3] >> 16 & 0xff,
+        H[3] >> 8 & 0xff,
+        H[3] & 0xff,
+        H[4] >> 24 & 0xff,
+        H[4] >> 16 & 0xff,
+        H[4] >> 8 & 0xff,
+        H[4] & 0xff
+    ];
+}
+exports.default = sha1;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kcLFq":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = "00000000-0000-0000-0000-000000000000";
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gvRcF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _validateJs = require("./validate.js");
+var _validateJsDefault = parcelHelpers.interopDefault(_validateJs);
+function version(uuid) {
+    if (!(0, _validateJsDefault.default)(uuid)) throw TypeError("Invalid UUID");
+    return parseInt(uuid.slice(14, 15), 16);
+}
+exports.default = version;
+
+},{"./validate.js":"eHPgI","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27797,45 +29151,46 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const RestaurantCard = ({ image_link, name, cuisines, rating, id })=>{
+var _constant = require("../constant");
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating, id })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: image_link
+                src: (0, _constant.IMG_CDN_URL) + cloudinaryImageId
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: name
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: cuisines
+                children: cuisines?.join(", ")
             }, void 0, false, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                 children: [
-                    rating,
+                    avgRating,
                     " star"
                 ]
             }, void 0, true, {
                 fileName: "src/components/RestaurantCard.js",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/RestaurantCard.js",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 10
     }, undefined);
 };
@@ -27849,7 +29204,7 @@ $RefreshReg$(_c, "RestaurantCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8pPOA":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../constant":"jVIFP"}],"8pPOA":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

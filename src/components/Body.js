@@ -14,15 +14,20 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState(restaurantList);
 
   useEffect(() => {
-    getRestaurants();
+    // getRestaurants();
   }, []);
 
-  async function getRestaurants(){
-    const data=await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
-    const json=await data.json();
-    console.log(json);
-console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.info);
-
+  async function getRestaurants() {
+    const data = await fetch(
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING"
+    );
+    const json = await data.json();
+    // console.log(json);
+    // console.log(json?.data?.cards[3]?.card);
+    // console.log(json?.data?.cards[3]?.card.card);
+    // console.log(json?.data?.cards[3]?.card.card.gridElements);
+    // console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle);
+    console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle.restaurants);
   }
 
   return (
@@ -51,8 +56,8 @@ console.log(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.resta
         {restaurants.map((restaurant) => {
           return (
             <RestaurantCard
-              {...restaurant}
-              key={restaurant.id}
+              {...restaurant?.info}
+              key={restaurant?.info?.id}
             ></RestaurantCard>
           );
         })}
