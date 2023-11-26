@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { restaurantList } from "../constant";
 import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer";
-import notFound from "../../images/notFound.png";
+import notFound from "../assets/images/notFound.png";
 
 function filterData(searchText, restaurants) {
   return restaurants.filter((restaurant) => {
@@ -42,13 +42,6 @@ const Body = () => {
   }
 
   if (!allRestaurants) return null;
-
-  // if(filteredRestaurants.length == 0) return (
-  //   <div>
-  //     <img src={notFound}></img>
-  //     <h3>Not Found</h3>
-  //   </div>
-  // );
 
   return allRestaurants.length == 0 ? (
     <Shimmer />
