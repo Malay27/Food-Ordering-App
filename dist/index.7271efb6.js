@@ -2959,22 +2959,24 @@ var _aboutDefault = parcelHelpers.interopDefault(_about);
 var _error = require("./components/Error");
 var _errorDefault = parcelHelpers.interopDefault(_error);
 var _reactRouterDom = require("react-router-dom");
+var _contant = require("./components/Contant");
+var _contantDefault = parcelHelpers.interopDefault(_contant);
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 11,
+                lineNumber: 12,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 12,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _footerDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined)
         ]
@@ -2986,27 +2988,55 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 18,
-            columnNumber: 12
-        }, undefined),
-        errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
             lineNumber: 19,
-            columnNumber: 17
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 22,
             columnNumber: 12
         }, undefined),
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 23,
+            lineNumber: 20,
             columnNumber: 17
-        }, undefined)
+        }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 23,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 24,
+                    columnNumber: 19
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 27,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 28,
+                    columnNumber: 19
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contantDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 31,
+                    columnNumber: 14
+                }, undefined),
+                errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorDefault.default), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 32,
+                    columnNumber: 19
+                }, undefined)
+            }
+        ]
     }
 ]);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
@@ -3014,7 +3044,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 26,
+    lineNumber: 36,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3025,7 +3055,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","./components/Error":"kvula","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header":"hsJbF","./components/Body":"8yaV8","./components/Footer":"8pPOA","./components/About":"9R1Eu","./components/Error":"kvula","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Contant":"kxr8d"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27225,6 +27255,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _logoPng = require("../assets/images/Logo.png");
 var _logoPngDefault = parcelHelpers.interopDefault(_logoPng);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
         href: "/",
@@ -27234,12 +27265,12 @@ const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
             alt: "logo"
         }, void 0, false, {
             fileName: "src/components/Header.js",
-            lineNumber: 4,
+            lineNumber: 5,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/Header.js",
-        lineNumber: 3,
+        lineNumber: 4,
         columnNumber: 21
     }, undefined);
 _c = Title;
@@ -27251,50 +27282,71 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 9,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "nav-item",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Home"
-                        }, void 0, false, {
-                            fileName: "src/components/Header.js",
-                            lineNumber: 12,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "About Us"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Home"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 14,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
                             lineNumber: 13,
                             columnNumber: 11
                         }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                            children: "Contact"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/about",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "About Us"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 17,
+                                columnNumber: 13
+                            }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 14,
+                            lineNumber: 16,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                            to: "/contact",
+                            children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                children: "Contact"
+                            }, void 0, false, {
+                                fileName: "src/components/Header.js",
+                                lineNumber: 20,
+                                columnNumber: 13
+                            }, undefined)
+                        }, void 0, false, {
+                            fileName: "src/components/Header.js",
+                            lineNumber: 19,
                             columnNumber: 11
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "Cart"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 15,
+                            lineNumber: 22,
                             columnNumber: 11
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/Header.js",
-                    lineNumber: 11,
+                    lineNumber: 12,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 10,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
             isLogedIn ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27302,20 +27354,20 @@ const Header = ()=>{
                 children: "Logout"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 18,
+                lineNumber: 25,
                 columnNumber: 20
             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                 onClick: ()=>setIsLogedIn(true),
                 children: "Login"
             }, void 0, false, {
                 fileName: "src/components/Header.js",
-                lineNumber: 18,
+                lineNumber: 25,
                 columnNumber: 82
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Header.js",
-        lineNumber: 8,
+        lineNumber: 9,
         columnNumber: 10
     }, undefined);
 };
@@ -27331,7 +27383,7 @@ $RefreshReg$(_c1, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/images/Logo.png":"9Z1C0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Z1C0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../assets/images/Logo.png":"9Z1C0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"9Z1C0":[function(require,module,exports) {
 module.exports = require("984596c05d8c7738").getBundleURL("aXMci") + "Logo.95a5d3a2.png" + "?" + Date.now();
 
 },{"984596c05d8c7738":"lgJ39"}],"lgJ39":[function(require,module,exports) {
@@ -27537,1346 +27589,7 @@ function registerExportsForReactRefresh(module1) {
     }
 }
 
-},{"7422ead32dcc1e6b":"786KC"}],"8yaV8":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0606.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _constant = require("../constant");
-var _restaurantCard = require("./RestaurantCard");
-var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
-var _shimmer = require("./Shimmer");
-var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
-var _notFoundPng = require("../assets/images/notFound.png");
-var _notFoundPngDefault = parcelHelpers.interopDefault(_notFoundPng);
-var _s = $RefreshSig$();
-function filterData(searchText, restaurants) {
-    return restaurants.filter((restaurant)=>{
-        return restaurant?.info?.name?.toLowerCase().includes(searchText);
-    });
-}
-const Body = ()=>{
-    _s();
-    const [searchText, setsearchText] = (0, _react.useState)("");
-    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
-    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
-    (0, _react.useEffect)(()=>{
-        getRestaurants();
-    }, []);
-    async function getRestaurants() {
-        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        // console.log(json);
-        // console.log(json?.data?.cards[3]?.card);
-        // console.log(json?.data?.cards[3]?.card.card);
-        // console.log(json?.data?.cards[3]?.card.card.gridElements);
-        // console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle);
-        console.log(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
-        setFilteredRestaurants(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
-        setAllRestaurants(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
-    }
-    if (!allRestaurants) return null;
-    return allRestaurants.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
-        fileName: "src/components/Body.js",
-        lineNumber: 31,
-        columnNumber: 39
-    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "search-container",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                        type: "text",
-                        className: "search-input",
-                        placeholder: "Search",
-                        value: searchText,
-                        onChange: (e)=>{
-                            setsearchText(e.target.value);
-                        }
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 33,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "search-btn",
-                        onClick: ()=>{
-                            const data = filterData(searchText.toLowerCase(), allRestaurants);
-                            setFilteredRestaurants(data);
-                        },
-                        children: "Search"
-                    }, void 0, false, {
-                        fileName: "src/components/Body.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/Body.js",
-                lineNumber: 32,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "restraunt-list",
-                children: filteredRestaurants.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: (0, _notFoundPngDefault.default)
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 45,
-                            columnNumber: 13
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                            children: "Not Found"
-                        }, void 0, false, {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 46,
-                            columnNumber: 13
-                        }, undefined)
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/Body.js",
-                    lineNumber: 44,
-                    columnNumber: 44
-                }, undefined) : filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
-                        ...restaurant?.info,
-                        key: restaurant?.info?.id,
-                        __source: {
-                            fileName: "src/components/Body.js",
-                            lineNumber: 47,
-                            columnNumber: 58
-                        },
-                        __self: undefined
-                    }))
-            }, void 0, false, {
-                fileName: "src/components/Body.js",
-                lineNumber: 43,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_s(Body, "maQ9vq1q5IA1BGiuubIRXnMBnhY=");
-_c = Body;
-exports.default = Body;
-var _c;
-$RefreshReg$(_c, "Body");
-
-  $parcel$ReactRefreshHelpers$0606.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constant":"jVIFP","./RestaurantCard":"bMboU","./Shimmer":"g6ZGj","../assets/images/notFound.png":"43vp1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
-parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
-const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
-const restaurantList = [
-    {
-        "info": {
-            "id": "50641",
-            "name": "Way Down South Restaurant",
-            "cloudinaryImageId": "ddjiab7vlmrgfhwelrcn",
-            "locality": "Baner",
-            "areaName": "Baner",
-            "costForTwo": "\u20B9250 for two",
-            "cuisines": [
-                "South Indian",
-                "North Indian",
-                "Thalis",
-                "Beverages"
-            ],
-            "avgRating": 4.2,
-            "veg": true,
-            "feeDetails": {
-                "restaurantId": "50641",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 5100
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 5100
-            },
-            "parentId": "225420",
-            "avgRatingString": "4.2",
-            "totalRatingsString": "10K+",
-            "promoted": true,
-            "adTrackingId": "cid=9116479~p=1~eid=0000018b-e5ff-7cce-16b4-fb2d00ff0132~srvts=1700370808014~63141",
-            "sla": {
-                "deliveryTime": 39,
-                "lastMileTravel": 5,
-                "serviceability": "SERVICEABLE",
-                "slaString": "39 mins",
-                "lastMileTravelString": "5.0 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 22:30:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "30% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "30% off up to \u20B975 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/way-down-south-restaurant-baner-pune-50641",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "245348",
-            "name": "Oye Kiddan",
-            "cloudinaryImageId": "poymismten2l3pbit1ui",
-            "locality": "Jambulkar Nagar",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9250 for two",
-            "cuisines": [
-                "North Indian",
-                "Punjabi",
-                "Thalis",
-                "Desserts"
-            ],
-            "avgRating": 4,
-            "feeDetails": {
-                "restaurantId": "245348",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3300
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3300
-            },
-            "parentId": "690",
-            "avgRatingString": "4.0",
-            "totalRatingsString": "10K+",
-            "sla": {
-                "deliveryTime": 19,
-                "lastMileTravel": 0.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "19 mins",
-                "lastMileTravelString": "0.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 16:00:00",
-                "opened": true
-            },
-            "badges": {
-                "textExtendedBadges": [
-                    {
-                        "iconId": "guiltfree/GF_Logo_android_3x",
-                        "shortDescription": "options available",
-                        "fontColor": "#7E808C"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "\u20B9125 OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use FLAT125",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "Flat \u20B9125 off on orders above \u20B9249 | Use code FLAT125",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "",
-                                    "fontColor": "#7E808C",
-                                    "iconId": "guiltfree/GF_Logo_android_3x",
-                                    "shortDescription": "options available"
-                                }
-                            }
-                        ]
-                    }
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/oye-kiddan-jambulkar-nagar-hinjawadi-pune-245348",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "765035",
-            "name": "Dadu's Sweet Emporio",
-            "cloudinaryImageId": "2b8aa7f4ea082d5209cebd505f41cc24",
-            "locality": "P N Commercial Spaces",
-            "areaName": "Wakad",
-            "costForTwo": "\u20B9350 for two",
-            "cuisines": [
-                "Indian",
-                "Sweets",
-                "Chaat",
-                "Snacks",
-                "Beverages"
-            ],
-            "avgRating": 4.6,
-            "veg": true,
-            "feeDetails": {
-                "restaurantId": "765035",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3900
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3900
-            },
-            "parentId": "5789",
-            "avgRatingString": "4.6",
-            "totalRatingsString": "100+",
-            "promoted": true,
-            "adTrackingId": "cid=9356510~p=2~eid=0000018b-e5ff-7cce-16b4-fb2e00ff0251~srvts=1700370808014~63141",
-            "sla": {
-                "deliveryTime": 25,
-                "lastMileTravel": 3,
-                "serviceability": "SERVICEABLE",
-                "slaString": "25 mins",
-                "lastMileTravelString": "3.0 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 22:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "\u20B9150 OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use WCHOTSTAR",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "isNewlyOnboarded": true,
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/dadus-sweet-emporio-p-n-commercial-spaces-wakad-pune-765035",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "4872",
-            "name": "Ghar Ka Khana - Since 2005",
-            "cloudinaryImageId": "f7b365c641d99818f272b5490f034226",
-            "locality": "Rajiv Gandhi Infotech Park",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9400 for two",
-            "cuisines": [
-                "North Indian",
-                "Punjabi",
-                "Thalis",
-                "Kebabs",
-                "Chinese"
-            ],
-            "avgRating": 4.1,
-            "feeDetails": {
-                "restaurantId": "4872",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3300
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3300
-            },
-            "parentId": "22458",
-            "avgRatingString": "4.1",
-            "totalRatingsString": "10K+",
-            "sla": {
-                "deliveryTime": 24,
-                "lastMileTravel": 0.8,
-                "serviceability": "SERVICEABLE",
-                "slaString": "24 mins",
-                "lastMileTravelString": "0.8 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 15:55:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "50% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "50% off up to \u20B9100 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/ghar-ka-khana-since-2005-rajiv-gandhi-infotech-park-hinjawadi-pune-4872",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "71607",
-            "name": "Hotel Vijay",
-            "cloudinaryImageId": "iujdgczww7oxjjuv0jxz",
-            "locality": "Shivaji Chowk",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9200 for two",
-            "cuisines": [
-                "South Indian"
-            ],
-            "avgRating": 4.3,
-            "veg": true,
-            "feeDetails": {
-                "restaurantId": "71607",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3300
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3300
-            },
-            "parentId": "103305",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "5K+",
-            "promoted": true,
-            "adTrackingId": "cid=9115560~p=3~eid=0000018b-e5ff-7cce-16b4-fb2f00ff037a~srvts=1700370808014~63141",
-            "sla": {
-                "deliveryTime": 34,
-                "lastMileTravel": 1.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "34 mins",
-                "lastMileTravelString": "1.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 23:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "60% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "60% off up to \u20B9120 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/hotel-vijay-shivaji-chowk-hinjawadi-pune-71607",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "395196",
-            "name": "McDonald's Gourmet Burger Collection",
-            "cloudinaryImageId": "zteez26u0kyxhgcttlhs",
-            "locality": "Marunji Road",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9600 for two",
-            "cuisines": [
-                "Burgers",
-                "Beverages",
-                "Cafe",
-                "Desserts"
-            ],
-            "avgRating": 4.3,
-            "feeDetails": {
-                "restaurantId": "395196",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3200
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3200
-            },
-            "parentId": "10761",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "50+",
-            "sla": {
-                "deliveryTime": 18,
-                "lastMileTravel": 0.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "18 mins",
-                "lastMileTravelString": "0.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-20 03:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "\u20B9150 OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use WCHOTSTAR",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/mcdonalds-gourmet-burger-collection-marunji-road-hinjawadi-pune-395196",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "24648",
-            "name": "Mr & Mrs Idly",
-            "cloudinaryImageId": "9bb6de596aef6f45994dbd51163ee2d9",
-            "locality": "Pimple Saudagar",
-            "areaName": "Pimple Saudagar",
-            "costForTwo": "\u20B9190 for two",
-            "cuisines": [
-                "South Indian",
-                "Chinese"
-            ],
-            "avgRating": 4.1,
-            "veg": true,
-            "feeDetails": {
-                "restaurantId": "24648",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 5700
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 5700
-            },
-            "parentId": "388168",
-            "avgRatingString": "4.1",
-            "totalRatingsString": "10K+",
-            "promoted": true,
-            "adTrackingId": "cid=9201757~p=4~eid=0000018b-e5ff-7cce-16b4-fb3000ff0454~srvts=1700370808014~63141",
-            "sla": {
-                "deliveryTime": 42,
-                "lastMileTravel": 6.8,
-                "serviceability": "SERVICEABLE",
-                "slaString": "42 mins",
-                "lastMileTravelString": "6.8 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 14:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "15% OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "15% off up to \u20B945 | Use code TRYNEW",
-                        "discountType": "Percentage",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/mr-and-mrs-idly-pimple-saudagar-pune-24648",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "23716",
-            "name": "McDonald's",
-            "cloudinaryImageId": "bb7ae131544c7d37e10fc5faf76f09d6",
-            "locality": "Marunji Road",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9400 for two",
-            "cuisines": [
-                "Burgers",
-                "Beverages",
-                "Cafe",
-                "Desserts"
-            ],
-            "avgRating": 4.3,
-            "feeDetails": {
-                "restaurantId": "23716",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3200
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3200
-            },
-            "parentId": "630",
-            "avgRatingString": "4.3",
-            "totalRatingsString": "10K+",
-            "sla": {
-                "deliveryTime": 20,
-                "lastMileTravel": 0.7,
-                "serviceability": "SERVICEABLE",
-                "slaString": "20 mins",
-                "lastMileTravelString": "0.7 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-20 03:00:00",
-                "opened": true
-            },
-            "badges": {},
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "\u20B9150 OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use WCHOTSTAR",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {},
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/mcdonalds-marunji-road-hinjawadi-pune-23716",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    },
-    {
-        "info": {
-            "id": "152615",
-            "name": "Indori Sarafa",
-            "cloudinaryImageId": "juyjygryzmxvjthqiyeg",
-            "locality": "Wakad",
-            "areaName": "Hinjawadi",
-            "costForTwo": "\u20B9200 for two",
-            "cuisines": [
-                "Snacks",
-                "Chaat",
-                "Street Food",
-                "North Indian"
-            ],
-            "avgRating": 4,
-            "veg": true,
-            "feeDetails": {
-                "restaurantId": "152615",
-                "fees": [
-                    {
-                        "name": "BASE_DISTANCE",
-                        "fee": 3300
-                    },
-                    {
-                        "name": "BASE_TIME"
-                    },
-                    {
-                        "name": "ANCILLARY_SURGE_FEE"
-                    }
-                ],
-                "totalFee": 3300
-            },
-            "parentId": "107005",
-            "avgRatingString": "4.0",
-            "totalRatingsString": "5K+",
-            "promoted": true,
-            "adTrackingId": "cid=9221580~p=5~eid=0000018b-e5ff-7cce-16b4-fb3100ff056c~srvts=1700370808014~63141",
-            "sla": {
-                "deliveryTime": 21,
-                "lastMileTravel": 1.4,
-                "serviceability": "SERVICEABLE",
-                "slaString": "21 mins",
-                "lastMileTravelString": "1.4 km",
-                "iconType": "ICON_TYPE_EMPTY"
-            },
-            "availability": {
-                "nextCloseTime": "2023-11-19 23:59:00",
-                "opened": true
-            },
-            "badges": {
-                "imageBadges": [
-                    {
-                        "imageId": "v1695133679/badges/Pure_Veg111.png",
-                        "description": "pureveg"
-                    }
-                ]
-            },
-            "isOpen": true,
-            "aggregatedDiscountInfoV2": {
-                "header": "\u20B975 OFF",
-                "shortDescriptionList": [
-                    {
-                        "meta": "Use BFBINGE",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ],
-                "descriptionList": [
-                    {
-                        "meta": "FLAT75 off | Use BFBINGE",
-                        "discountType": "Flat",
-                        "operationType": "RESTAURANT"
-                    }
-                ]
-            },
-            "type": "F",
-            "badgesV2": {
-                "entityBadges": {
-                    "imageBased": {
-                        "badgeObject": [
-                            {
-                                "attributes": {
-                                    "description": "pureveg",
-                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
-                                }
-                            }
-                        ]
-                    },
-                    "textBased": {},
-                    "textExtendedBadges": {}
-                }
-            },
-            "orderabilityCommunication": {
-                "title": {},
-                "subTitle": {},
-                "message": {},
-                "customIcon": {}
-            },
-            "differentiatedUi": {
-                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-                "differentiatedUiMediaDetails": {
-                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-                    "lottie": {},
-                    "video": {}
-                }
-            },
-            "reviewsSummary": {},
-            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-            "restaurantOfferPresentationInfo": {}
-        },
-        "analytics": {
-            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
-        },
-        "cta": {
-            "link": "https://www.swiggy.com/restaurants/indori-sarafa-wakad-hinjawadi-pune-152615",
-            "text": "RESTAURANT_MENU",
-            "type": "WEBLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_byName"
-    }
-];
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$ffb1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _constant = require("../constant");
-const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating, id })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "card",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: (0, _constant.IMG_CDN_URL) + cloudinaryImageId
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 10,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                children: name
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: cuisines?.join(", ")
-            }, void 0, false, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                children: [
-                    avgRating,
-                    " star"
-                ]
-            }, void 0, true, {
-                fileName: "src/components/RestaurantCard.js",
-                lineNumber: 13,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/RestaurantCard.js",
-        lineNumber: 9,
-        columnNumber: 10
-    }, undefined);
-};
-_c = RestaurantCard;
-exports.default = RestaurantCard;
-var _c;
-$RefreshReg$(_c, "RestaurantCard");
-
-  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0b04.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Shimmer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "restraunt-list",
-        children: Array(10).fill("").map((e)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-card"
-            }, void 0, false, {
-                fileName: "src/components/Shimmer.js",
-                lineNumber: 3,
-                columnNumber: 42
-            }, undefined))
-    }, void 0, false, {
-        fileName: "src/components/Shimmer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Shimmer;
-exports.default = Shimmer;
-var _c;
-$RefreshReg$(_c, "Shimmer");
-
-  $parcel$ReactRefreshHelpers$0b04.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"43vp1":[function(require,module,exports) {
-module.exports = require("c638bfa6e8f0650d").getBundleURL("aXMci") + "notFound.1739d828.png" + "?" + Date.now();
-
-},{"c638bfa6e8f0650d":"lgJ39"}],"8pPOA":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bc7c.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Footer = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-        children: "Footer"
-    }, void 0, false, {
-        fileName: "src/components/Footer.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = Footer;
-exports.default = Footer;
-var _c;
-$RefreshReg$(_c, "Footer");
-
-  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$5b98.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const About = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "About us Page"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 3,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                children: "This is Food Ordering App"
-            }, void 0, false, {
-                fileName: "src/components/About.js",
-                lineNumber: 4,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/About.js",
-        lineNumber: 2,
-        columnNumber: 10
-    }, undefined);
-};
-_c = About;
-exports.default = About;
-var _c;
-$RefreshReg$(_c, "About");
-
-  $parcel$ReactRefreshHelpers$5b98.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$0ba4.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _reactRouterDom = require("react-router-dom");
-var _s = $RefreshSig$();
-const Error = ()=>{
-    _s();
-    const err = (0, _reactRouterDom.useRouteError)();
-    console.log(err);
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                children: "Oops!!"
-            }, void 0, false, {
-                fileName: "src/components/Error.js",
-                lineNumber: 6,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Something went wrong !!"
-            }, void 0, false, {
-                fileName: "src/components/Error.js",
-                lineNumber: 7,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: err.status + " : " + err.statusText
-            }, void 0, false, {
-                fileName: "src/components/Error.js",
-                lineNumber: 8,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
-        fileName: "src/components/Error.js",
-        lineNumber: 5,
-        columnNumber: 10
-    }, undefined);
-};
-_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
-    return [
-        (0, _reactRouterDom.useRouteError)
-    ];
-});
-_c = Error;
-exports.default = Error;
-var _c;
-$RefreshReg$(_c, "Error");
-
-  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9xmpe":[function(require,module,exports) {
+},{"7422ead32dcc1e6b":"786KC"}],"9xmpe":[function(require,module,exports) {
 /**
  * React Router DOM v6.20.0
  *
@@ -35226,6 +33939,1374 @@ function persistAppliedTransitions(_window, transitions) {
     }
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["bgABq","1xC6H","2kQhy"], "2kQhy", "parcelRequirea9df")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8yaV8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0606 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0606.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _constant = require("../constant");
+var _restaurantCard = require("./RestaurantCard");
+var _restaurantCardDefault = parcelHelpers.interopDefault(_restaurantCard);
+var _shimmer = require("./Shimmer");
+var _shimmerDefault = parcelHelpers.interopDefault(_shimmer);
+var _notFoundPng = require("../assets/images/notFound.png");
+var _notFoundPngDefault = parcelHelpers.interopDefault(_notFoundPng);
+var _s = $RefreshSig$();
+function filterData(searchText, restaurants) {
+    return restaurants.filter((restaurant)=>{
+        return restaurant?.info?.name?.toLowerCase().includes(searchText);
+    });
+}
+const Body = ()=>{
+    _s();
+    const [searchText, setsearchText] = (0, _react.useState)("");
+    const [filteredRestaurants, setFilteredRestaurants] = (0, _react.useState)([]);
+    const [allRestaurants, setAllRestaurants] = (0, _react.useState)([]);
+    (0, _react.useEffect)(()=>{
+        getRestaurants();
+    }, []);
+    async function getRestaurants() {
+        const data = await fetch("https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.591945&lng=73.73897649999999&page_type=DESKTOP_WEB_LISTING");
+        const json = await data.json();
+        // console.log(json);
+        // console.log(json?.data?.cards[3]?.card);
+        // console.log(json?.data?.cards[3]?.card.card);
+        // console.log(json?.data?.cards[3]?.card.card.gridElements);
+        // console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle);
+        console.log(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
+        setFilteredRestaurants(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
+        setAllRestaurants(json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants);
+    }
+    if (!allRestaurants) return null;
+    return allRestaurants.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
+        fileName: "src/components/Body.js",
+        lineNumber: 31,
+        columnNumber: 39
+    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "search-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        className: "search-input",
+                        placeholder: "Search",
+                        value: searchText,
+                        onChange: (e)=>{
+                            setsearchText(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 33,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "search-btn",
+                        onClick: ()=>{
+                            const data = filterData(searchText.toLowerCase(), allRestaurants);
+                            setFilteredRestaurants(data);
+                        },
+                        children: "Search"
+                    }, void 0, false, {
+                        fileName: "src/components/Body.js",
+                        lineNumber: 36,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/Body.js",
+                lineNumber: 32,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "restraunt-list",
+                children: filteredRestaurants.length == 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: (0, _notFoundPngDefault.default)
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 45,
+                            columnNumber: 13
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: "Not Found"
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 46,
+                            columnNumber: 13
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 44,
+                    columnNumber: 44
+                }, undefined) : filteredRestaurants.map((restaurant)=>/*#__PURE__*/ (0, _react.createElement)((0, _restaurantCardDefault.default), {
+                        ...restaurant?.info,
+                        key: restaurant?.info?.id,
+                        __source: {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 47,
+                            columnNumber: 58
+                        },
+                        __self: undefined
+                    }))
+            }, void 0, false, {
+                fileName: "src/components/Body.js",
+                lineNumber: 43,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_s(Body, "maQ9vq1q5IA1BGiuubIRXnMBnhY=");
+_c = Body;
+exports.default = Body;
+var _c;
+$RefreshReg$(_c, "Body");
+
+  $parcel$ReactRefreshHelpers$0606.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../constant":"jVIFP","./RestaurantCard":"bMboU","./Shimmer":"g6ZGj","../assets/images/notFound.png":"43vp1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jVIFP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "IMG_CDN_URL", ()=>IMG_CDN_URL);
+parcelHelpers.export(exports, "restaurantList", ()=>restaurantList);
+const IMG_CDN_URL = "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/";
+const restaurantList = [
+    {
+        "info": {
+            "id": "50641",
+            "name": "Way Down South Restaurant",
+            "cloudinaryImageId": "ddjiab7vlmrgfhwelrcn",
+            "locality": "Baner",
+            "areaName": "Baner",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "South Indian",
+                "North Indian",
+                "Thalis",
+                "Beverages"
+            ],
+            "avgRating": 4.2,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "50641",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 5100
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 5100
+            },
+            "parentId": "225420",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "10K+",
+            "promoted": true,
+            "adTrackingId": "cid=9116479~p=1~eid=0000018b-e5ff-7cce-16b4-fb2d00ff0132~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 39,
+                "lastMileTravel": 5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "39 mins",
+                "lastMileTravelString": "5.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 22:30:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "30% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "30% off up to \u20B975 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/way-down-south-restaurant-baner-pune-50641",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "245348",
+            "name": "Oye Kiddan",
+            "cloudinaryImageId": "poymismten2l3pbit1ui",
+            "locality": "Jambulkar Nagar",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "North Indian",
+                "Punjabi",
+                "Thalis",
+                "Desserts"
+            ],
+            "avgRating": 4,
+            "feeDetails": {
+                "restaurantId": "245348",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "690",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 19,
+                "lastMileTravel": 0.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "19 mins",
+                "lastMileTravelString": "0.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 16:00:00",
+                "opened": true
+            },
+            "badges": {
+                "textExtendedBadges": [
+                    {
+                        "iconId": "guiltfree/GF_Logo_android_3x",
+                        "shortDescription": "options available",
+                        "fontColor": "#7E808C"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9125 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use FLAT125",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "Flat \u20B9125 off on orders above \u20B9249 | Use code FLAT125",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "",
+                                    "fontColor": "#7E808C",
+                                    "iconId": "guiltfree/GF_Logo_android_3x",
+                                    "shortDescription": "options available"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/oye-kiddan-jambulkar-nagar-hinjawadi-pune-245348",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "765035",
+            "name": "Dadu's Sweet Emporio",
+            "cloudinaryImageId": "2b8aa7f4ea082d5209cebd505f41cc24",
+            "locality": "P N Commercial Spaces",
+            "areaName": "Wakad",
+            "costForTwo": "\u20B9350 for two",
+            "cuisines": [
+                "Indian",
+                "Sweets",
+                "Chaat",
+                "Snacks",
+                "Beverages"
+            ],
+            "avgRating": 4.6,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "765035",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3900
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3900
+            },
+            "parentId": "5789",
+            "avgRatingString": "4.6",
+            "totalRatingsString": "100+",
+            "promoted": true,
+            "adTrackingId": "cid=9356510~p=2~eid=0000018b-e5ff-7cce-16b4-fb2e00ff0251~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "25 mins",
+                "lastMileTravelString": "3.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 22:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "isNewlyOnboarded": true,
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/dadus-sweet-emporio-p-n-commercial-spaces-wakad-pune-765035",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "4872",
+            "name": "Ghar Ka Khana - Since 2005",
+            "cloudinaryImageId": "f7b365c641d99818f272b5490f034226",
+            "locality": "Rajiv Gandhi Infotech Park",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "North Indian",
+                "Punjabi",
+                "Thalis",
+                "Kebabs",
+                "Chinese"
+            ],
+            "avgRating": 4.1,
+            "feeDetails": {
+                "restaurantId": "4872",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "22458",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 24,
+                "lastMileTravel": 0.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "24 mins",
+                "lastMileTravelString": "0.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 15:55:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "50% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "50% off up to \u20B9100 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/ghar-ka-khana-since-2005-rajiv-gandhi-infotech-park-hinjawadi-pune-4872",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "71607",
+            "name": "Hotel Vijay",
+            "cloudinaryImageId": "iujdgczww7oxjjuv0jxz",
+            "locality": "Shivaji Chowk",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "South Indian"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "71607",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "103305",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "5K+",
+            "promoted": true,
+            "adTrackingId": "cid=9115560~p=3~eid=0000018b-e5ff-7cce-16b4-fb2f00ff037a~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 34,
+                "lastMileTravel": 1.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "34 mins",
+                "lastMileTravelString": "1.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "60% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "60% off up to \u20B9120 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/hotel-vijay-shivaji-chowk-hinjawadi-pune-71607",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "395196",
+            "name": "McDonald's Gourmet Burger Collection",
+            "cloudinaryImageId": "zteez26u0kyxhgcttlhs",
+            "locality": "Marunji Road",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9600 for two",
+            "cuisines": [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            "avgRating": 4.3,
+            "feeDetails": {
+                "restaurantId": "395196",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3200
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3200
+            },
+            "parentId": "10761",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "50+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 0.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "18 mins",
+                "lastMileTravelString": "0.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-20 03:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-gourmet-burger-collection-marunji-road-hinjawadi-pune-395196",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "24648",
+            "name": "Mr & Mrs Idly",
+            "cloudinaryImageId": "9bb6de596aef6f45994dbd51163ee2d9",
+            "locality": "Pimple Saudagar",
+            "areaName": "Pimple Saudagar",
+            "costForTwo": "\u20B9190 for two",
+            "cuisines": [
+                "South Indian",
+                "Chinese"
+            ],
+            "avgRating": 4.1,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "24648",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 5700
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 5700
+            },
+            "parentId": "388168",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "10K+",
+            "promoted": true,
+            "adTrackingId": "cid=9201757~p=4~eid=0000018b-e5ff-7cce-16b4-fb3000ff0454~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 42,
+                "lastMileTravel": 6.8,
+                "serviceability": "SERVICEABLE",
+                "slaString": "42 mins",
+                "lastMileTravelString": "6.8 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 14:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "15% OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "15% off up to \u20B945 | Use code TRYNEW",
+                        "discountType": "Percentage",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mr-and-mrs-idly-pimple-saudagar-pune-24648",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "23716",
+            "name": "McDonald's",
+            "cloudinaryImageId": "bb7ae131544c7d37e10fc5faf76f09d6",
+            "locality": "Marunji Road",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "Burgers",
+                "Beverages",
+                "Cafe",
+                "Desserts"
+            ],
+            "avgRating": 4.3,
+            "feeDetails": {
+                "restaurantId": "23716",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3200
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3200
+            },
+            "parentId": "630",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 0.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20 mins",
+                "lastMileTravelString": "0.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-20 03:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B9150 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use WCHOTSTAR",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT \u20B9150 off on order above \u20B9349 | Use MATCHDAYTREAT",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/mcdonalds-marunji-road-hinjawadi-pune-23716",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    },
+    {
+        "info": {
+            "id": "152615",
+            "name": "Indori Sarafa",
+            "cloudinaryImageId": "juyjygryzmxvjthqiyeg",
+            "locality": "Wakad",
+            "areaName": "Hinjawadi",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Snacks",
+                "Chaat",
+                "Street Food",
+                "North Indian"
+            ],
+            "avgRating": 4,
+            "veg": true,
+            "feeDetails": {
+                "restaurantId": "152615",
+                "fees": [
+                    {
+                        "name": "BASE_DISTANCE",
+                        "fee": 3300
+                    },
+                    {
+                        "name": "BASE_TIME"
+                    },
+                    {
+                        "name": "ANCILLARY_SURGE_FEE"
+                    }
+                ],
+                "totalFee": 3300
+            },
+            "parentId": "107005",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "5K+",
+            "promoted": true,
+            "adTrackingId": "cid=9221580~p=5~eid=0000018b-e5ff-7cce-16b4-fb3100ff056c~srvts=1700370808014~63141",
+            "sla": {
+                "deliveryTime": 21,
+                "lastMileTravel": 1.4,
+                "serviceability": "SERVICEABLE",
+                "slaString": "21 mins",
+                "lastMileTravelString": "1.4 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2023-11-19 23:59:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "aggregatedDiscountInfoV2": {
+                "header": "\u20B975 OFF",
+                "shortDescriptionList": [
+                    {
+                        "meta": "Use BFBINGE",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ],
+                "descriptionList": [
+                    {
+                        "meta": "FLAT75 off | Use BFBINGE",
+                        "discountType": "Flat",
+                        "operationType": "RESTAURANT"
+                    }
+                ]
+            },
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "orderabilityCommunication": {
+                "title": {},
+                "subTitle": {},
+                "message": {},
+                "customIcon": {}
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {
+            "context": "seo-data-642612e7-5691-4f52-a78a-18d80fa8d01b"
+        },
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/indori-sarafa-wakad-hinjawadi-pune-152615",
+            "text": "RESTAURANT_MENU",
+            "type": "WEBLINK"
+        },
+        "widgetId": "collectionV5RestaurantListWidget_byName"
+    }
+];
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bMboU":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ffb1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$ffb1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _constant = require("../constant");
+const RestaurantCard = ({ cloudinaryImageId, name, cuisines, avgRating, id })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "card",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _constant.IMG_CDN_URL) + cloudinaryImageId
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 10,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                children: name
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: cuisines?.join(", ")
+            }, void 0, false, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 12,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                children: [
+                    avgRating,
+                    " star"
+                ]
+            }, void 0, true, {
+                fileName: "src/components/RestaurantCard.js",
+                lineNumber: 13,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/RestaurantCard.js",
+        lineNumber: 9,
+        columnNumber: 10
+    }, undefined);
+};
+_c = RestaurantCard;
+exports.default = RestaurantCard;
+var _c;
+$RefreshReg$(_c, "RestaurantCard");
+
+  $parcel$ReactRefreshHelpers$ffb1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","../constant":"jVIFP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"g6ZGj":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0b04 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0b04.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Shimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "restraunt-list",
+        children: Array(10).fill("").map((e)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-card"
+            }, void 0, false, {
+                fileName: "src/components/Shimmer.js",
+                lineNumber: 3,
+                columnNumber: 42
+            }, undefined))
+    }, void 0, false, {
+        fileName: "src/components/Shimmer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Shimmer;
+exports.default = Shimmer;
+var _c;
+$RefreshReg$(_c, "Shimmer");
+
+  $parcel$ReactRefreshHelpers$0b04.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"43vp1":[function(require,module,exports) {
+module.exports = require("c638bfa6e8f0650d").getBundleURL("aXMci") + "notFound.1739d828.png" + "?" + Date.now();
+
+},{"c638bfa6e8f0650d":"lgJ39"}],"8pPOA":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bc7c = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bc7c.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Footer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+        children: "Footer"
+    }, void 0, false, {
+        fileName: "src/components/Footer.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Footer;
+exports.default = Footer;
+var _c;
+$RefreshReg$(_c, "Footer");
+
+  $parcel$ReactRefreshHelpers$bc7c.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9R1Eu":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5b98 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5b98.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const About = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "About us Page"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 3,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                children: "This is Food Ordering App"
+            }, void 0, false, {
+                fileName: "src/components/About.js",
+                lineNumber: 4,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/About.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = About;
+exports.default = About;
+var _c;
+$RefreshReg$(_c, "About");
+
+  $parcel$ReactRefreshHelpers$5b98.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kvula":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0ba4 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0ba4.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactRouterDom = require("react-router-dom");
+var _s = $RefreshSig$();
+const Error = ()=>{
+    _s();
+    const err = (0, _reactRouterDom.useRouteError)();
+    console.log(err);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "Oops!!"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 6,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Something went wrong !!"
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 7,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: err.status + " : " + err.statusText
+            }, void 0, false, {
+                fileName: "src/components/Error.js",
+                lineNumber: 8,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/Error.js",
+        lineNumber: 5,
+        columnNumber: 10
+    }, undefined);
+};
+_s(Error, "U5GmGaAmh0j0MVy+E8WdBnjlm7s=", false, function() {
+    return [
+        (0, _reactRouterDom.useRouteError)
+    ];
+});
+_c = Error;
+exports.default = Error;
+var _c;
+$RefreshReg$(_c, "Error");
+
+  $parcel$ReactRefreshHelpers$0ba4.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kxr8d":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$5bfe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$5bfe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const Contact = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        children: "This is contact us page"
+    }, void 0, false, {
+        fileName: "src/components/Contant.js",
+        lineNumber: 2,
+        columnNumber: 10
+    }, undefined);
+};
+_c = Contact;
+exports.default = Contact;
+var _c;
+$RefreshReg$(_c, "Contact");
+
+  $parcel$ReactRefreshHelpers$5bfe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["bgABq","1xC6H","2kQhy"], "2kQhy", "parcelRequirea9df")
 
 //# sourceMappingURL=index.7271efb6.js.map
