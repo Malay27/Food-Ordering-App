@@ -31,13 +31,13 @@ const Body = () => {
     // console.log(json?.data?.cards[3]?.card.card.gridElements);
     // console.log(json?.data?.cards[3]?.card.card.gridElements.infoWithStyle);
     console.log(
-      json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[3]?.card.card.gridElements.infoWithStyle.restaurants
     );
     setFilteredRestaurants(
-      json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[3]?.card.card.gridElements.infoWithStyle.restaurants
     );
     setAllRestaurants(
-      json?.data?.cards[5]?.card.card.gridElements.infoWithStyle.restaurants
+      json?.data?.cards[3]?.card.card.gridElements.infoWithStyle.restaurants
     );
   }
 
