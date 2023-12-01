@@ -13,8 +13,10 @@ const RestaurantDetails = () => {
   }, []);
 
   async function getRestaurantInfo() {
+    console.log(id);
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.591945&lng=73.73897649999999&restaurantId=3414"
+      "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.591945&lng=73.73897649999999&restaurantId=" +
+        id
     );
     const json = await data.json();
     console.log(json.data);
@@ -29,20 +31,20 @@ const RestaurantDetails = () => {
   useEffect(() => {
     if (restaurant) {
       setBasicInformation(restaurant?.cards[0]?.card?.card?.info);
-      setMenu(restaurant?.cards[3].groupedCard.cardGroupMap.REGULAR.cards);
+      setMenu(restaurant?.cards[2].groupedCard.cardGroupMap.REGULAR.cards);
     }
   }, [restaurant]);
 
-  useEffect(() => {
-    console.log(basicInformation);
-  }, [basicInformation]);
+  // useEffect(() => {
+  //   console.log(basicInformation);
+  // }, [basicInformation]);
 
-  useEffect(() => {
-    console.log(menu);
-  }, [menu]);
+  // useEffect(() => {
+  //   console.log(menu);
+  // }, [menu]);
 
   return (
-    <div>
+    <div className="menu">
       <div>
         <h1>RestaurantId: {basicInformation?.id}</h1>
         <h2>{basicInformation?.name}</h2>
@@ -53,7 +55,14 @@ const RestaurantDetails = () => {
         <h5>{basicInformation?.costForTwoMessage}</h5>
       </div>
       <div>
-
+        <h3>Menu:</h3>
+        {menu?.map((menuItem) => (
+          <ul key={menuItem?.card?.info?.id}>
+            {menuItem?.card?.card?.itemCards?.map((item) => (
+              <li key={item?.card?.info?.id}>{item?.card?.info?.name}</li>
+            ))}
+          </ul>
+        ))}
       </div>
     </div>
   );
